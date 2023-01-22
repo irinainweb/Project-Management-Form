@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body onload="resetForm()">
+        <div class="container">
+            <div class="page-header text-center">
+                <h2>PROJECT MANAGEMENT FORM</h2>
+            </div>
+            <form id="projForm" method="get" >
+                <div class="form-group">
+                    <label for="projId" >Project ID:</label> 
+                    <input type="text" class="form-control"  id="projid" onchange="getProj()" onkeydown="myFunction()" >
+                </div>
+                <div class="form-group">
+                    <label for="projname" >Project Name:</label>
+                    <input type="text" class="form-control" id="projname"  >
+                </div>
+                <div class="form-group">
+                    <label for="assignedto">Assigned-To</label>
+                    <input type="text" class="form-control" id="assignto">
+                </div>
+                <div class="form-group">
+                    <label for="assignmentdate">Assignment-Date</label>
+                    <input type="date" class="form-control" id="assigndate">
+
+                </div>
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="number" class="form-control" id="deadline" >
+                </div>
+
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-primary" id="save" 
+                            onclick="saveData()" disabled>Save</button>
+                    <button type="button" class="btn btn-primary" id="change" 
+                            onclick="changeData()" disabled>Change</button>
+                    <button type="button" class="btn btn-primary" id="reset" 
+                            onclick="resetForm()" disabled>Reset</button>
+                </div>
+            </form>
+        </div>
+        <script src="http://login2explore.com/jpdb/resources/js/0.0.3/jpdb-commons.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
+
